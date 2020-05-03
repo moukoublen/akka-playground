@@ -11,7 +11,7 @@ WORKDIR /usr/src/akka-playground
 RUN /opt/sbt/bin/sbt universal:packageZipTarball
 RUN ls ./target/universal
 
-FROM openjdk:11-jre-slim-buster
+FROM openjdk:11-jre-buster
 RUN mkdir -p /opt/akka-playground
 WORKDIR /opt/akka-playground
 COPY --from=builder /usr/src/akka-playground/target/universal/mainapp-0.1.0-SNAPSHOT.tgz .
