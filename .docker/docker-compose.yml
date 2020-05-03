@@ -26,19 +26,32 @@ services:
     build:
       context: ../
       dockerfile: .docker/Dockerfile
+    ports:
+      - "9000:8558"
     environment:
       KAFKA_BROKER: kafka
 
   seed1:
-    hostname: seed0
+    hostname: seed1
     build:
       context: ../
       dockerfile: .docker/Dockerfile
+    ports:
+      - "9001:8558"
     environment:
       KAFKA_BROKER: kafka
 
   seed2:
-    hostname: seed0
+    hostname: seed2
+    build:
+      context: ../
+      dockerfile: .docker/Dockerfile
+    ports:
+      - "9002:8558"
+    environment:
+      KAFKA_BROKER: kafka
+
+  node:
     build:
       context: ../
       dockerfile: .docker/Dockerfile

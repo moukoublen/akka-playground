@@ -14,6 +14,7 @@ object Dependencies {
 
       //Scala libs
       "com.typesafe.akka" %% "akka-actor"           % akkaVersion,
+      "com.typesafe.akka" %% "akka-remote"          % akkaVersion,
       "com.typesafe.akka" %% "akka-cluster"         % akkaVersion,
       "com.typesafe.akka" %% "akka-slf4j"           % akkaVersion,
       "com.typesafe.akka" %% "akka-stream"          % akkaVersion,
@@ -22,6 +23,8 @@ object Dependencies {
       "com.typesafe.akka" %% "akka-http-core"       % akkaHttpVersion,
       "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpVersion,
       "com.typesafe.akka" %% "akka-http-xml"        % akkaHttpVersion,
+      "com.lightbend.akka.management" %% "akka-management" % "1.0.6",
+      "com.lightbend.akka.management" %% "akka-management-cluster-http" % "1.0.6",
 
       //Test
       "org.scalatest"     %% "scalatest"                 % "3.1.1"         % Test,
