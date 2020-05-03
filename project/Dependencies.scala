@@ -2,8 +2,8 @@ import sbt._
 
 object Dependencies {
   // Versions
-  lazy val akkaVersion     = "2.5.23"
-  lazy val akkaHttpVersion = "10.1.10"
+  lazy val akkaVersion     = "2.5.31"
+  lazy val akkaHttpVersion = "10.1.11"
   lazy val akkaStreamKafka = "2.0.2"
 
   // Projects
@@ -23,7 +23,7 @@ object Dependencies {
       "com.typesafe.akka" %% "akka-http-core"       % akkaHttpVersion,
       "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpVersion,
       "com.typesafe.akka" %% "akka-http-xml"        % akkaHttpVersion,
-      "com.lightbend.akka.management" %% "akka-management" % "1.0.6",
+      "com.lightbend.akka.management" %% "akka-management"              % "1.0.6",
       "com.lightbend.akka.management" %% "akka-management-cluster-http" % "1.0.6",
 
       //Test
