@@ -1,9 +1,9 @@
 FROM openjdk:11-jdk-slim-buster as sbt
 RUN apt-get update && apt-get install -y wget
 RUN mkdir -p /opt/sbt
-RUN wget -q https://piccolo.link/sbt-1.3.10.tgz -O /opt/sbt/sbt.tgz
+RUN wget -q https://piccolo.link/sbt-1.3.13.tgz -O /opt/sbt/sbt.tgz
 RUN tar xf /opt/sbt/sbt.tgz --strip-components=1 -C /opt/sbt
-RUN opt/sbt/bin/sbt sbtVersion
+RUN /opt/sbt/bin/sbt sbtVersion
 
 FROM sbt as builder
 COPY . /usr/src/akka-playground
