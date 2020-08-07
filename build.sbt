@@ -2,7 +2,7 @@ import Dependencies._
 
 ThisBuild / organization := "com.moukoublen.playground"
 ThisBuild / version      := "0.1.0-SNAPSHOT"
-ThisBuild / scalaVersion := "2.13.1"
+ThisBuild / scalaVersion := "2.13.3"
 
 scalacOptions ++= Seq(
   "-target:11",
